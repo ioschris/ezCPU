@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CPU.cs" />
+    <Compile Include="Classes\CPU.cs" />
     <Compile Include="ezCPU.cs">
       <SubType>Form</SubType>
     </Compile>
