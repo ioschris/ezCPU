@@ -1,0 +1,10 @@
+C:\Users\crhar\source\repos\ezCPU\ezCPU\bin\Debug\ezCPU.exe.config
+C:\Users\crhar\source\repos\ezCPU\ezCPU\bin\Debug\ezCPU.exe
+C:\Users\crhar\source\repos\ezCPU\ezCPU\bin\Debug\ezCPU.pdb
+C:\Users\crhar\source\repos\ezCPU\ezCPU\obj\Debug\ezCPU.csprojAssemblyReference.cache
+C:\Users\crhar\source\repos\ezCPU\ezCPU\obj\Debug\ezCPU.Properties.Resources.resources
+C:\Users\crhar\source\repos\ezCPU\ezCPU\obj\Debug\ezCPU.csproj.GenerateResource.cache
+C:\Users\crhar\source\repos\ezCPU\ezCPU\obj\Debug\ezCPU.csproj.CoreCompileInputs.cache
+C:\Users\crhar\source\repos\ezCPU\ezCPU\obj\Debug\ezCPU.exe
+C:\Users\crhar\source\repos\ezCPU\ezCPU\obj\Debug\ezCPU.pdb
+C:\Users\crhar\source\repos\ezCPU\ezCPU\obj\Debug\ezCPU.ezCPU.resources
