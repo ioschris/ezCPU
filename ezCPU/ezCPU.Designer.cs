@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtGPUName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
@@ -55,6 +58,18 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cpuTimer = new System.Windows.Forms.Timer(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtGPUManufacturer = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtGPUVideoMode = new System.Windows.Forms.TextBox();
+            this.txtGPUStatus = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtGPURefresh = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtGPUDriverVersion = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -72,6 +87,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -79,6 +95,45 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "GPU";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtGPUDriverVersion);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.txtGPUStatus);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.txtGPURefresh);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtGPUVideoMode);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.txtGPUManufacturer);
+            this.groupBox2.Controls.Add(this.txtGPUName);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Location = new System.Drawing.Point(6, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(368, 195);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Graphics Information";
+            // 
+            // txtGPUName
+            // 
+            this.txtGPUName.Enabled = false;
+            this.txtGPUName.Location = new System.Drawing.Point(94, 28);
+            this.txtGPUName.Name = "txtGPUName";
+            this.txtGPUName.Size = new System.Drawing.Size(252, 20);
+            this.txtGPUName.TabIndex = 1;
+            this.txtGPUName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 31);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Name";
             // 
             // tabPage2
             // 
@@ -318,17 +373,111 @@
             this.cpuTimer.Enabled = true;
             this.cpuTimer.Interval = 1000;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(18, 57);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Manufacturer";
+            // 
+            // txtGPUManufacturer
+            // 
+            this.txtGPUManufacturer.Enabled = false;
+            this.txtGPUManufacturer.Location = new System.Drawing.Point(94, 54);
+            this.txtGPUManufacturer.Name = "txtGPUManufacturer";
+            this.txtGPUManufacturer.Size = new System.Drawing.Size(252, 20);
+            this.txtGPUManufacturer.TabIndex = 4;
+            this.txtGPUManufacturer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(18, 83);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 13);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Video Mode";
+            // 
+            // txtGPUVideoMode
+            // 
+            this.txtGPUVideoMode.Enabled = false;
+            this.txtGPUVideoMode.Location = new System.Drawing.Point(94, 80);
+            this.txtGPUVideoMode.Name = "txtGPUVideoMode";
+            this.txtGPUVideoMode.Size = new System.Drawing.Size(252, 20);
+            this.txtGPUVideoMode.TabIndex = 6;
+            this.txtGPUVideoMode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtGPUStatus
+            // 
+            this.txtGPUStatus.Enabled = false;
+            this.txtGPUStatus.Location = new System.Drawing.Point(262, 106);
+            this.txtGPUStatus.Name = "txtGPUStatus";
+            this.txtGPUStatus.Size = new System.Drawing.Size(84, 20);
+            this.txtGPUStatus.TabIndex = 13;
+            this.txtGPUStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(184, 109);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Status";
+            // 
+            // txtGPURefresh
+            // 
+            this.txtGPURefresh.Enabled = false;
+            this.txtGPURefresh.Location = new System.Drawing.Point(94, 106);
+            this.txtGPURefresh.Name = "txtGPURefresh";
+            this.txtGPURefresh.Size = new System.Drawing.Size(84, 20);
+            this.txtGPURefresh.TabIndex = 11;
+            this.txtGPURefresh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 109);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Refresh Rate";
+            // 
+            // txtGPUDriverVersion
+            // 
+            this.txtGPUDriverVersion.Enabled = false;
+            this.txtGPUDriverVersion.Location = new System.Drawing.Point(94, 132);
+            this.txtGPUDriverVersion.Name = "txtGPUDriverVersion";
+            this.txtGPUDriverVersion.Size = new System.Drawing.Size(252, 20);
+            this.txtGPUDriverVersion.TabIndex = 17;
+            this.txtGPUDriverVersion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(19, 135);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 13);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Driver Version";
+            // 
             // ezCPU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 405);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ezCPU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ezCPU";
             this.Load += new System.EventHandler(this.ezCPU_Load);
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -365,6 +514,19 @@
         public System.Windows.Forms.TextBox txtCaption;
         public System.Windows.Forms.TextBox txtStatus;
         public System.Windows.Forms.TextBox txtArchitecture;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtGPUName;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox txtGPUManufacturer;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.TextBox txtGPUVideoMode;
+        public System.Windows.Forms.TextBox txtGPUStatus;
+        private System.Windows.Forms.Label label13;
+        public System.Windows.Forms.TextBox txtGPURefresh;
+        private System.Windows.Forms.Label label14;
+        public System.Windows.Forms.TextBox txtGPUDriverVersion;
+        private System.Windows.Forms.Label label15;
     }
 }
 

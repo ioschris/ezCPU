@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\CPU.cs" />
+    <Compile Include="Classes\GPU.cs" />
     <Compile Include="ezCPU.cs">
       <SubType>Form</SubType>
     </Compile>
