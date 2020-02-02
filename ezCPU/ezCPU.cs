@@ -15,7 +15,8 @@ namespace ezCPU
     public partial class ezCPU : Form
     {
         CPU cpu = new CPU();
-        GPU gpu = new GPU(); 
+        GPU gpu = new GPU();
+        Motherboard mb = new Motherboard();
 
         public ezCPU()
         {
@@ -34,6 +35,10 @@ namespace ezCPU
             //Call the GPU class and display the results
             gpu.GetGPUInfo();
             DisplayGPUStats();
+
+            //Call the motherboard class and display the results
+            mb.GetMBInfo();
+            DisplayMBStats();
         }
 
         //Pulls the information from the CPU class to display it on the form
@@ -68,6 +73,22 @@ namespace ezCPU
             txtGPURefresh.Text = gpu.gpuRefreshRate + " hertz";
             txtGPUStatus.Text = gpu.gpuStatus;
             txtGPUDriverVersion.Text = gpu.gpuDriverVersion;
+        }
+        
+        //Pulls the information from the Motherboard class to display it on the form
+        public void DisplayMBStats()
+        {
+            //Motherboard information
+            txtMBManufacturer.Text = mb.mbManufacturer;
+            txtMBModel.Text = mb.mbModel;
+            txtMBSerial.Text = mb.mbSerial;
+            txtMBBusType.Text = mb.mbBusType;
+            txtMBStatus.Text = mb.mbStatus;
+
+            //BIOS information
+            txtBIOSVersion.Text = mb.biosVersion;
+            txtBIOSDate.Text = mb.biosDate;
+            txtBIOSBrand.Text = mb.biosManufacturer;
         }
     }
 }

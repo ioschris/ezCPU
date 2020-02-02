@@ -29,9 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ezCPU));
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtBIOSDate = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtBIOSVersion = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtBIOSBrand = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtMBStatus = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtMBBusType = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtMBSerial = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtMBModel = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtMBManufacturer = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtGPUDriverVersion = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtGPUStatus = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtGPURefresh = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtGPUVideoMode = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtGPUManufacturer = new System.Windows.Forms.TextBox();
             this.txtGPUName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -58,16 +87,9 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cpuTimer = new System.Windows.Forms.Timer(this.components);
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtGPUManufacturer = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtGPUVideoMode = new System.Windows.Forms.TextBox();
-            this.txtGPUStatus = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtGPURefresh = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtGPUDriverVersion = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage4.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -77,6 +99,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox4);
+            this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -84,6 +108,184 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Motherboard";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.txtBIOSDate);
+            this.groupBox4.Controls.Add(this.label22);
+            this.groupBox4.Controls.Add(this.txtBIOSVersion);
+            this.groupBox4.Controls.Add(this.label23);
+            this.groupBox4.Controls.Add(this.txtBIOSBrand);
+            this.groupBox4.Location = new System.Drawing.Point(6, 207);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(368, 142);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "BIOS Information";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(20, 85);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 13);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Release Date";
+            // 
+            // txtBIOSDate
+            // 
+            this.txtBIOSDate.Enabled = false;
+            this.txtBIOSDate.Location = new System.Drawing.Point(96, 82);
+            this.txtBIOSDate.Name = "txtBIOSDate";
+            this.txtBIOSDate.Size = new System.Drawing.Size(252, 20);
+            this.txtBIOSDate.TabIndex = 14;
+            this.txtBIOSDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(20, 59);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(42, 13);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "Version";
+            // 
+            // txtBIOSVersion
+            // 
+            this.txtBIOSVersion.Enabled = false;
+            this.txtBIOSVersion.Location = new System.Drawing.Point(96, 56);
+            this.txtBIOSVersion.Name = "txtBIOSVersion";
+            this.txtBIOSVersion.Size = new System.Drawing.Size(252, 20);
+            this.txtBIOSVersion.TabIndex = 12;
+            this.txtBIOSVersion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(20, 33);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(35, 13);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "Brand";
+            // 
+            // txtBIOSBrand
+            // 
+            this.txtBIOSBrand.Enabled = false;
+            this.txtBIOSBrand.Location = new System.Drawing.Point(96, 30);
+            this.txtBIOSBrand.Name = "txtBIOSBrand";
+            this.txtBIOSBrand.Size = new System.Drawing.Size(252, 20);
+            this.txtBIOSBrand.TabIndex = 10;
+            this.txtBIOSBrand.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtMBStatus);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.txtMBBusType);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.txtMBSerial);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.txtMBModel);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.txtMBManufacturer);
+            this.groupBox3.Location = new System.Drawing.Point(6, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(368, 195);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Motherboard Information";
+            // 
+            // txtMBStatus
+            // 
+            this.txtMBStatus.Enabled = false;
+            this.txtMBStatus.Location = new System.Drawing.Point(262, 106);
+            this.txtMBStatus.Name = "txtMBStatus";
+            this.txtMBStatus.Size = new System.Drawing.Size(84, 20);
+            this.txtMBStatus.TabIndex = 17;
+            this.txtMBStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(184, 109);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(37, 13);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "Status";
+            // 
+            // txtMBBusType
+            // 
+            this.txtMBBusType.Enabled = false;
+            this.txtMBBusType.Location = new System.Drawing.Point(94, 106);
+            this.txtMBBusType.Name = "txtMBBusType";
+            this.txtMBBusType.Size = new System.Drawing.Size(84, 20);
+            this.txtMBBusType.TabIndex = 15;
+            this.txtMBBusType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(19, 109);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(52, 13);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "Bus Type";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(18, 83);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 13);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "Serial Number";
+            // 
+            // txtMBSerial
+            // 
+            this.txtMBSerial.Enabled = false;
+            this.txtMBSerial.Location = new System.Drawing.Point(94, 80);
+            this.txtMBSerial.Name = "txtMBSerial";
+            this.txtMBSerial.Size = new System.Drawing.Size(252, 20);
+            this.txtMBSerial.TabIndex = 8;
+            this.txtMBSerial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(18, 57);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 13);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "Model";
+            // 
+            // txtMBModel
+            // 
+            this.txtMBModel.Enabled = false;
+            this.txtMBModel.Location = new System.Drawing.Point(94, 54);
+            this.txtMBModel.Name = "txtMBModel";
+            this.txtMBModel.Size = new System.Drawing.Size(252, 20);
+            this.txtMBModel.TabIndex = 6;
+            this.txtMBModel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(18, 31);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 13);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Manufacturer";
+            // 
+            // txtMBManufacturer
+            // 
+            this.txtMBManufacturer.Enabled = false;
+            this.txtMBManufacturer.Location = new System.Drawing.Point(94, 28);
+            this.txtMBManufacturer.Name = "txtMBManufacturer";
+            this.txtMBManufacturer.Size = new System.Drawing.Size(252, 20);
+            this.txtMBManufacturer.TabIndex = 4;
+            this.txtMBManufacturer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tabPage3
             // 
@@ -116,6 +318,96 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Graphics Information";
+            // 
+            // txtGPUDriverVersion
+            // 
+            this.txtGPUDriverVersion.Enabled = false;
+            this.txtGPUDriverVersion.Location = new System.Drawing.Point(94, 132);
+            this.txtGPUDriverVersion.Name = "txtGPUDriverVersion";
+            this.txtGPUDriverVersion.Size = new System.Drawing.Size(252, 20);
+            this.txtGPUDriverVersion.TabIndex = 17;
+            this.txtGPUDriverVersion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(19, 135);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 13);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Driver Version";
+            // 
+            // txtGPUStatus
+            // 
+            this.txtGPUStatus.Enabled = false;
+            this.txtGPUStatus.Location = new System.Drawing.Point(262, 106);
+            this.txtGPUStatus.Name = "txtGPUStatus";
+            this.txtGPUStatus.Size = new System.Drawing.Size(84, 20);
+            this.txtGPUStatus.TabIndex = 13;
+            this.txtGPUStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(184, 109);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Status";
+            // 
+            // txtGPURefresh
+            // 
+            this.txtGPURefresh.Enabled = false;
+            this.txtGPURefresh.Location = new System.Drawing.Point(94, 106);
+            this.txtGPURefresh.Name = "txtGPURefresh";
+            this.txtGPURefresh.Size = new System.Drawing.Size(84, 20);
+            this.txtGPURefresh.TabIndex = 11;
+            this.txtGPURefresh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(19, 109);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(70, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Refresh Rate";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(18, 83);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(64, 13);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Video Mode";
+            // 
+            // txtGPUVideoMode
+            // 
+            this.txtGPUVideoMode.Enabled = false;
+            this.txtGPUVideoMode.Location = new System.Drawing.Point(94, 80);
+            this.txtGPUVideoMode.Name = "txtGPUVideoMode";
+            this.txtGPUVideoMode.Size = new System.Drawing.Size(252, 20);
+            this.txtGPUVideoMode.TabIndex = 6;
+            this.txtGPUVideoMode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(18, 57);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Manufacturer";
+            // 
+            // txtGPUManufacturer
+            // 
+            this.txtGPUManufacturer.Enabled = false;
+            this.txtGPUManufacturer.Location = new System.Drawing.Point(94, 54);
+            this.txtGPUManufacturer.Name = "txtGPUManufacturer";
+            this.txtGPUManufacturer.Size = new System.Drawing.Size(252, 20);
+            this.txtGPUManufacturer.TabIndex = 4;
+            this.txtGPUManufacturer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtGPUName
             // 
@@ -373,96 +665,6 @@
             this.cpuTimer.Enabled = true;
             this.cpuTimer.Interval = 1000;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 57);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 13);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Manufacturer";
-            // 
-            // txtGPUManufacturer
-            // 
-            this.txtGPUManufacturer.Enabled = false;
-            this.txtGPUManufacturer.Location = new System.Drawing.Point(94, 54);
-            this.txtGPUManufacturer.Name = "txtGPUManufacturer";
-            this.txtGPUManufacturer.Size = new System.Drawing.Size(252, 20);
-            this.txtGPUManufacturer.TabIndex = 4;
-            this.txtGPUManufacturer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(18, 83);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 13);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Video Mode";
-            // 
-            // txtGPUVideoMode
-            // 
-            this.txtGPUVideoMode.Enabled = false;
-            this.txtGPUVideoMode.Location = new System.Drawing.Point(94, 80);
-            this.txtGPUVideoMode.Name = "txtGPUVideoMode";
-            this.txtGPUVideoMode.Size = new System.Drawing.Size(252, 20);
-            this.txtGPUVideoMode.TabIndex = 6;
-            this.txtGPUVideoMode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtGPUStatus
-            // 
-            this.txtGPUStatus.Enabled = false;
-            this.txtGPUStatus.Location = new System.Drawing.Point(262, 106);
-            this.txtGPUStatus.Name = "txtGPUStatus";
-            this.txtGPUStatus.Size = new System.Drawing.Size(84, 20);
-            this.txtGPUStatus.TabIndex = 13;
-            this.txtGPUStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(184, 109);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 13);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Status";
-            // 
-            // txtGPURefresh
-            // 
-            this.txtGPURefresh.Enabled = false;
-            this.txtGPURefresh.Location = new System.Drawing.Point(94, 106);
-            this.txtGPURefresh.Name = "txtGPURefresh";
-            this.txtGPURefresh.Size = new System.Drawing.Size(84, 20);
-            this.txtGPURefresh.TabIndex = 11;
-            this.txtGPURefresh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 109);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Refresh Rate";
-            // 
-            // txtGPUDriverVersion
-            // 
-            this.txtGPUDriverVersion.Enabled = false;
-            this.txtGPUDriverVersion.Location = new System.Drawing.Point(94, 132);
-            this.txtGPUDriverVersion.Name = "txtGPUDriverVersion";
-            this.txtGPUDriverVersion.Size = new System.Drawing.Size(252, 20);
-            this.txtGPUDriverVersion.TabIndex = 17;
-            this.txtGPUDriverVersion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(19, 135);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 13);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Driver Version";
-            // 
             // ezCPU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,11 +672,17 @@
             this.ClientSize = new System.Drawing.Size(412, 405);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ezCPU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ezCPU";
             this.Load += new System.EventHandler(this.ezCPU_Load);
+            this.tabPage4.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -527,6 +735,24 @@
         private System.Windows.Forms.Label label14;
         public System.Windows.Forms.TextBox txtGPUDriverVersion;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label20;
+        public System.Windows.Forms.TextBox txtMBManufacturer;
+        private System.Windows.Forms.Label label16;
+        public System.Windows.Forms.TextBox txtMBModel;
+        private System.Windows.Forms.Label label17;
+        public System.Windows.Forms.TextBox txtMBSerial;
+        public System.Windows.Forms.TextBox txtMBStatus;
+        private System.Windows.Forms.Label label18;
+        public System.Windows.Forms.TextBox txtMBBusType;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label21;
+        public System.Windows.Forms.TextBox txtBIOSDate;
+        private System.Windows.Forms.Label label22;
+        public System.Windows.Forms.TextBox txtBIOSVersion;
+        private System.Windows.Forms.Label label23;
+        public System.Windows.Forms.TextBox txtBIOSBrand;
     }
 }
 
