@@ -10,6 +10,7 @@ namespace ezCPU
 {
     public class CPU
     {
+        //Public cpu variables
         public string cpuName;
         public string cpuManufacturer;
         public string cpuCores;

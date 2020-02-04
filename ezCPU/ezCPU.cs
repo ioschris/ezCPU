@@ -100,6 +100,7 @@ namespace ezCPU
             txtBIOSBrand.Text = mb.biosManufacturer;
         }
 
+        //Pulls the information from the Memory class to display it on the form
         public void DisplayMemoryStats()
         {
             //RAM information

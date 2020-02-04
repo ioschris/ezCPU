@@ -10,6 +10,7 @@ namespace ezCPU
 {
     public class Memory
     {
+        //Public ram variables
         public string ramSize;
         public string ramManufacturer;
         public string ramType;
