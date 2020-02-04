@@ -11,30 +11,22 @@ namespace ezCPU
 {
     public class Motherboard
     {
+        //Public motherboard variables
         public string mbModel;
         public string mbManufacturer;
         public string mbSerial;
         public string mbBusType;
         public string mbStatus;
 
+        //Public BIOS variables
         public string biosVersion;
         public string biosDate;
         public string biosManufacturer;
 
-        //This will take the 8 character string returned and convert it accordingly
-        public string CustomDateTime(string s)
-        {
-            string year = s.Substring(0, 4);
-            string yearRemoved = s.Remove(0, 4);
+        //Access Date class
+        Date dt = new Date();
 
-            string month = yearRemoved.Substring(0, 2);
-            string monthRemoved = s.Remove(0, 6);
-
-            string day = monthRemoved;
-
-            return month + "-" + day + "-" + year;
-        }
-
+        //Get all of the motherboard info
         public void GetMBInfo()
         {
             try
@@ -73,7 +65,7 @@ namespace ezCPU
 
                     //Assign bios date (Custom Date Time)
                     string tempBIOSDate = obj["ReleaseDate"].ToString();
-                    biosDate = CustomDateTime(tempBIOSDate.Substring(0, 8));
+                    biosDate = dt.CustomDateTime(tempBIOSDate.Substring(0, 8));
 
                     //Assign the BIOS manufacturer
                     biosManufacturer = obj["Manufacturer"].ToString();

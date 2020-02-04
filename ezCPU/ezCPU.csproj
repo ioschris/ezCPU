@@ -85,7 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\CPU.cs" />
+    <Compile Include="Classes\Date.cs" />
     <Compile Include="Classes\GPU.cs" />
+    <Compile Include="Classes\Memory.cs" />
     <Compile Include="Classes\Motherboard.cs" />
     <Compile Include="ezCPU.cs">
       <SubType>Form</SubType>

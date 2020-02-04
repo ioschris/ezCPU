@@ -64,10 +64,10 @@ namespace ezCPU
             try
             {
                 //Create the ManagementObjectSearcher grabbing everything from the Win32_Processor
-                ManagementObjectSearcher myProcessorObject = new ManagementObjectSearcher("select * from Win32_Processor");
+                ManagementObjectSearcher cpu = new ManagementObjectSearcher("select * from Win32_Processor");
 
                 //Loop through the returned results
-                foreach (ManagementObject obj in myProcessorObject.Get())
+                foreach (ManagementObject obj in cpu.Get())
                 {
                     //Assign CPU Name
                     cpuName = obj["Name"].ToString();

@@ -14,10 +14,13 @@ namespace ezCPU
 {
     public partial class ezCPU : Form
     {
+        //Create objects of each class that is needed
         CPU cpu = new CPU();
         GPU gpu = new GPU();
         Motherboard mb = new Motherboard();
+        Memory mem = new Memory();
 
+        //Constructor
         public ezCPU()
         {
             InitializeComponent();
@@ -27,6 +30,7 @@ namespace ezCPU
         private void ezCPU_Load(object sender, EventArgs e)
         {
             this.Text = this.Text + " - v" + Application.ProductVersion;
+            this.abVersion.Text = "Version: " + Application.ProductVersion;
 
             //Call CPU class and display the results
             cpu.GetCPUInfo();
@@ -39,6 +43,10 @@ namespace ezCPU
             //Call the motherboard class and display the results
             mb.GetMBInfo();
             DisplayMBStats();
+
+            //Call the memory class and display the results
+            mem.GetRAMInfo();
+            DisplayMemoryStats();
         }
 
         //Pulls the information from the CPU class to display it on the form
@@ -73,6 +81,7 @@ namespace ezCPU
             txtGPURefresh.Text = gpu.gpuRefreshRate + " hertz";
             txtGPUStatus.Text = gpu.gpuStatus;
             txtGPUDriverVersion.Text = gpu.gpuDriverVersion;
+            txtGPUDriverDate.Text = gpu.gpuDriverDate;
         }
         
         //Pulls the information from the Motherboard class to display it on the form
@@ -89,6 +98,21 @@ namespace ezCPU
             txtBIOSVersion.Text = mb.biosVersion;
             txtBIOSDate.Text = mb.biosDate;
             txtBIOSBrand.Text = mb.biosManufacturer;
+        }
+
+        public void DisplayMemoryStats()
+        {
+            //RAM information
+            txtRAMSize.Text = mem.BytesToGB(mem.ramSize);
+            txtRAMManufacturer.Text = mem.ramManufacturer;
+            txtRAMType.Text = mem.GetRAMType(Convert.ToInt16(mem.ramType));
+            txtRAMFrequency.Text = String.Format("{0:n1}", Convert.ToInt16(mem.ramFrequency)) + " MHz";
+        }
+
+        //Visit the GitHub repo on click
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/ioschris/ezCPU");
         }
     }
 }
