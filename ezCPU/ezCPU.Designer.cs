@@ -51,6 +51,8 @@
             this.txtMBManufacturer = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtGPUDriverDate = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.txtGPUDriverVersion = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtGPUStatus = new System.Windows.Forms.TextBox();
@@ -86,27 +88,25 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.cpuTimer = new System.Windows.Forms.Timer(this.components);
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtRAMSize = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtRAMManufacturer = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txtRAMType = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.txtRAMFrequency = new System.Windows.Forms.TextBox();
-            this.pbAbout = new System.Windows.Forms.PictureBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.abVersion = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtRAMType = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtRAMManufacturer = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtRAMSize = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.txtGPUDriverDate = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.abVersion = new System.Windows.Forms.Label();
+            this.pbAbout = new System.Windows.Forms.PictureBox();
+            this.cpuTimer = new System.Windows.Forms.Timer(this.components);
             this.tabPage4.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -118,9 +118,9 @@
             this.tabPage5.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAbout)).BeginInit();
-            this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAbout)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage4
@@ -346,6 +346,24 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Graphics Information";
+            // 
+            // txtGPUDriverDate
+            // 
+            this.txtGPUDriverDate.Enabled = false;
+            this.txtGPUDriverDate.Location = new System.Drawing.Point(94, 158);
+            this.txtGPUDriverDate.Name = "txtGPUDriverDate";
+            this.txtGPUDriverDate.Size = new System.Drawing.Size(252, 20);
+            this.txtGPUDriverDate.TabIndex = 19;
+            this.txtGPUDriverDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(19, 161);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(61, 13);
+            this.label31.TabIndex = 18;
+            this.label31.Text = "Driver Date";
             // 
             // txtGPUDriverVersion
             // 
@@ -696,59 +714,23 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "RAM Information";
             // 
-            // tabPage1
+            // label27
             // 
-            this.tabPage1.Controls.Add(this.groupBox7);
-            this.tabPage1.Controls.Add(this.groupBox6);
-            this.tabPage1.Controls.Add(this.pbAbout);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(380, 355);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "About";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(18, 109);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(57, 13);
+            this.label27.TabIndex = 11;
+            this.label27.Text = "Frequency";
             // 
-            // cpuTimer
+            // txtRAMFrequency
             // 
-            this.cpuTimer.Enabled = true;
-            this.cpuTimer.Interval = 1000;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(18, 83);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(27, 13);
-            this.label24.TabIndex = 3;
-            this.label24.Text = "Size";
-            // 
-            // txtRAMSize
-            // 
-            this.txtRAMSize.Enabled = false;
-            this.txtRAMSize.Location = new System.Drawing.Point(94, 80);
-            this.txtRAMSize.Name = "txtRAMSize";
-            this.txtRAMSize.Size = new System.Drawing.Size(252, 20);
-            this.txtRAMSize.TabIndex = 2;
-            this.txtRAMSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(18, 31);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(70, 13);
-            this.label25.TabIndex = 7;
-            this.label25.Text = "Manufacturer";
-            // 
-            // txtRAMManufacturer
-            // 
-            this.txtRAMManufacturer.Enabled = false;
-            this.txtRAMManufacturer.Location = new System.Drawing.Point(94, 28);
-            this.txtRAMManufacturer.Name = "txtRAMManufacturer";
-            this.txtRAMManufacturer.Size = new System.Drawing.Size(252, 20);
-            this.txtRAMManufacturer.TabIndex = 6;
-            this.txtRAMManufacturer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRAMFrequency.Enabled = false;
+            this.txtRAMFrequency.Location = new System.Drawing.Point(94, 106);
+            this.txtRAMFrequency.Name = "txtRAMFrequency";
+            this.txtRAMFrequency.Size = new System.Drawing.Size(252, 20);
+            this.txtRAMFrequency.TabIndex = 10;
+            this.txtRAMFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label26
             // 
@@ -768,85 +750,54 @@
             this.txtRAMType.TabIndex = 8;
             this.txtRAMType.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label27
+            // label25
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(18, 109);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(57, 13);
-            this.label27.TabIndex = 11;
-            this.label27.Text = "Frequency";
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(18, 31);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(70, 13);
+            this.label25.TabIndex = 7;
+            this.label25.Text = "Manufacturer";
             // 
-            // txtRAMFrequency
+            // txtRAMManufacturer
             // 
-            this.txtRAMFrequency.Enabled = false;
-            this.txtRAMFrequency.Location = new System.Drawing.Point(94, 106);
-            this.txtRAMFrequency.Name = "txtRAMFrequency";
-            this.txtRAMFrequency.Size = new System.Drawing.Size(252, 20);
-            this.txtRAMFrequency.TabIndex = 10;
-            this.txtRAMFrequency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtRAMManufacturer.Enabled = false;
+            this.txtRAMManufacturer.Location = new System.Drawing.Point(94, 28);
+            this.txtRAMManufacturer.Name = "txtRAMManufacturer";
+            this.txtRAMManufacturer.Size = new System.Drawing.Size(252, 20);
+            this.txtRAMManufacturer.TabIndex = 6;
+            this.txtRAMManufacturer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pbAbout
+            // label24
             // 
-            this.pbAbout.Image = ((System.Drawing.Image)(resources.GetObject("pbAbout.Image")));
-            this.pbAbout.Location = new System.Drawing.Point(128, 6);
-            this.pbAbout.Name = "pbAbout";
-            this.pbAbout.Size = new System.Drawing.Size(125, 125);
-            this.pbAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAbout.TabIndex = 0;
-            this.pbAbout.TabStop = false;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(18, 83);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(27, 13);
+            this.label24.TabIndex = 3;
+            this.label24.Text = "Size";
             // 
-            // groupBox6
+            // txtRAMSize
             // 
-            this.groupBox6.Controls.Add(this.label30);
-            this.groupBox6.Controls.Add(this.linkLabel1);
-            this.groupBox6.Controls.Add(this.label29);
-            this.groupBox6.Controls.Add(this.label28);
-            this.groupBox6.Controls.Add(this.abVersion);
-            this.groupBox6.Location = new System.Drawing.Point(6, 137);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(368, 142);
-            this.groupBox6.TabIndex = 1;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "About ezCPU";
+            this.txtRAMSize.Enabled = false;
+            this.txtRAMSize.Location = new System.Drawing.Point(94, 80);
+            this.txtRAMSize.Name = "txtRAMSize";
+            this.txtRAMSize.Size = new System.Drawing.Size(252, 20);
+            this.txtRAMSize.TabIndex = 2;
+            this.txtRAMSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // abVersion
+            // tabPage1
             // 
-            this.abVersion.AutoSize = true;
-            this.abVersion.Location = new System.Drawing.Point(143, 32);
-            this.abVersion.Name = "abVersion";
-            this.abVersion.Size = new System.Drawing.Size(45, 13);
-            this.abVersion.TabIndex = 0;
-            this.abVersion.Text = "Version:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(136, 54);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(97, 13);
-            this.label28.TabIndex = 1;
-            this.label28.Text = "Author: Chris Harris";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(138, 76);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(44, 13);
-            this.label29.TabIndex = 2;
-            this.label29.Text = "Source:";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(188, 76);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(40, 13);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "GitHub";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.tabPage1.Controls.Add(this.groupBox7);
+            this.tabPage1.Controls.Add(this.groupBox6);
+            this.tabPage1.Controls.Add(this.pbAbout);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(380, 355);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "About";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -867,6 +818,20 @@
             this.button1.Text = "Check for Updates";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label30);
+            this.groupBox6.Controls.Add(this.linkLabel1);
+            this.groupBox6.Controls.Add(this.label29);
+            this.groupBox6.Controls.Add(this.label28);
+            this.groupBox6.Controls.Add(this.abVersion);
+            this.groupBox6.Location = new System.Drawing.Point(6, 137);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(368, 142);
+            this.groupBox6.TabIndex = 1;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "About ezCPU";
+            // 
             // label30
             // 
             this.label30.AutoSize = true;
@@ -876,23 +841,58 @@
             this.label30.TabIndex = 4;
             this.label30.Text = "Please email all errors to: ezcpu@chrisharrisdev.com";
             // 
-            // txtGPUDriverDate
+            // linkLabel1
             // 
-            this.txtGPUDriverDate.Enabled = false;
-            this.txtGPUDriverDate.Location = new System.Drawing.Point(94, 158);
-            this.txtGPUDriverDate.Name = "txtGPUDriverDate";
-            this.txtGPUDriverDate.Size = new System.Drawing.Size(252, 20);
-            this.txtGPUDriverDate.TabIndex = 19;
-            this.txtGPUDriverDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(188, 76);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(40, 13);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "GitHub";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // label31
+            // label29
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(19, 161);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(61, 13);
-            this.label31.TabIndex = 18;
-            this.label31.Text = "Driver Date";
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(138, 76);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(44, 13);
+            this.label29.TabIndex = 2;
+            this.label29.Text = "Source:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(136, 54);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(97, 13);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "Author: Chris Harris";
+            // 
+            // abVersion
+            // 
+            this.abVersion.AutoSize = true;
+            this.abVersion.Location = new System.Drawing.Point(143, 32);
+            this.abVersion.Name = "abVersion";
+            this.abVersion.Size = new System.Drawing.Size(45, 13);
+            this.abVersion.TabIndex = 0;
+            this.abVersion.Text = "Version:";
+            // 
+            // pbAbout
+            // 
+            this.pbAbout.Image = ((System.Drawing.Image)(resources.GetObject("pbAbout.Image")));
+            this.pbAbout.Location = new System.Drawing.Point(128, 6);
+            this.pbAbout.Name = "pbAbout";
+            this.pbAbout.Size = new System.Drawing.Size(125, 125);
+            this.pbAbout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAbout.TabIndex = 0;
+            this.pbAbout.TabStop = false;
+            // 
+            // cpuTimer
+            // 
+            this.cpuTimer.Enabled = true;
+            this.cpuTimer.Interval = 1000;
             // 
             // ezCPU
             // 
@@ -923,10 +923,10 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAbout)).EndInit();
+            this.groupBox7.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbAbout)).EndInit();
             this.ResumeLayout(false);
 
         }
