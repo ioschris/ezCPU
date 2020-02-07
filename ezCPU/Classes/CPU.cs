@@ -6,6 +6,9 @@ namespace ezCPU
 {
     public class CPU
     {
+        //Check for null object
+        IsNull n = new IsNull();
+
         //Public cpu variables
         public string cpuName;
         public string cpuManufacturer;
@@ -67,31 +70,31 @@ namespace ezCPU
                 foreach (ManagementObject obj in cpu.Get())
                 {
                     //Assign CPU Name
-                    cpuName = obj["Name"].ToString();
+                    cpuName = n.isNull(obj["Name"]);
 
                     //Assign CPU Manufacturer
-                    cpuManufacturer = obj["Manufacturer"].ToString();
+                    cpuManufacturer = n.isNull(obj["Manufacturer"]);
 
                     //Assign CPU cores
-                    cpuCores = obj["NumberOfCores"].ToString();
+                    cpuCores = n.isNull(obj["NumberOfCores"]);
 
                     //Assign CPU threads
-                    cpuThreads = obj["ThreadCount"].ToString();
+                    cpuThreads = n.isNull(obj["ThreadCount"]);
 
                     //Assign CPU max speed
-                    cpuMaxSpeed = obj["MaxClockSpeed"].ToString();
+                    cpuMaxSpeed = n.isNull(obj["MaxClockSpeed"]);
 
                     //Display current clock speed
-                    cpuCurrentSpeed = obj["CurrentClockSpeed"].ToString();
+                    cpuCurrentSpeed = n.isNull(obj["CurrentClockSpeed"]);
 
                     //Get family, model and stepping
-                    cpuCaption = obj["Caption"].ToString();
+                    cpuCaption = n.isNull(obj["Caption"]);
 
                     //Get status of CPU-
-                    cpuStatus = obj["Status"].ToString();
+                    cpuStatus = n.isNull(obj["Status"]);
 
                     //Get the architecure
-                    cpuArchitecture = obj["Architecture"].ToString();
+                    cpuArchitecture = n.isNull(obj["Architecture"]);
                 }
             }
             catch (Exception e)

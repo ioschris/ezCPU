@@ -817,6 +817,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Check for Updates";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox6
             // 
@@ -906,6 +907,7 @@
             this.Name = "ezCPU";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ezCPU";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ezCPU_FormClosed);
             this.Load += new System.EventHandler(this.ezCPU_Load);
             this.tabPage4.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);

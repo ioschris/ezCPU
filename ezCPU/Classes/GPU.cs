@@ -8,6 +8,9 @@ namespace ezCPU
 {
     public class GPU
     {
+        //Check for null object
+        IsNull n = new IsNull();
+
         //Public GPU variables
         public string gpuName;
         public string gpuManufacturer;
@@ -41,27 +44,35 @@ namespace ezCPU
                 foreach (ManagementObject obj in gpu.Get())
                 {
                     //Assign GPU name
-                    gpuName = obj["VideoProcessor"].ToString();
+                    gpuName = n.isNull(obj["VideoProcessor"]);
 
                     //Assign GPU manufacturer
-                    string tempGPU = obj["Name"].ToString();
-                    GetManufacturer(tempGPU);
+                    string tempGPU = n.isNull(obj["Name"]);
+
+                    if (tempGPU != "N/A")
+                    {
+                        GetManufacturer(tempGPU);
+                    }
 
                     //Assign video mode description
-                    gpuVideoMode = obj["VideoModeDescription"].ToString();
+                    gpuVideoMode = n.isNull(obj["VideoModeDescription"]);
 
                     //Assign refresh rate
-                    gpuRefreshRate = obj["CurrentRefreshRate"].ToString();
+                    gpuRefreshRate = n.isNull(obj["CurrentRefreshRate"]);
 
                     //Assign GPU status
-                    gpuStatus = obj["Status"].ToString();
+                    gpuStatus = n.isNull(obj["Status"]);
 
                     //Assign GPU driver version
-                    gpuDriverVersion = obj["DriverVersion"].ToString();
+                    gpuDriverVersion = n.isNull(obj["DriverVersion"]);
 
                     //Assign GPU driver date
-                    string tempGPUDriverDate = obj["DriverDate"].ToString();
-                    gpuDriverDate = dt.CustomDateTime(tempGPUDriverDate.Substring(0, 8));
+                    string tempGPUDriverDate = n.isNull(obj["DriverDate"]);
+
+                    if (tempGPUDriverDate != "N/A")
+                    {
+                        gpuDriverDate = dt.CustomDateTime(tempGPUDriverDate.Substring(0, 8));
+                    } 
                 }
             }
             catch (Exception e)

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Net;
 using System.Windows.Forms;
 
 namespace ezCPU
@@ -11,6 +13,9 @@ namespace ezCPU
         Motherboard mb = new Motherboard();
         Memory mem = new Memory();
 
+        //Variable to hold the new app version
+        string newVersion = "";
+
         //Constructor
         public ezCPU()
         {
@@ -20,6 +25,11 @@ namespace ezCPU
         //On load, do this
         private void ezCPU_Load(object sender, EventArgs e)
         {
+            if (System.IO.File.Exists(Application.StartupPath + "/ezCPU(2).exe"))
+            {
+                System.IO.File.Delete(Application.StartupPath + "/ezCPU(2).exe");
+            }
+
             this.Text = this.Text + " - v" + Application.ProductVersion;
             this.abVersion.Text = "Version: " + Application.ProductVersion;
 
@@ -48,6 +58,10 @@ namespace ezCPU
             if (cpu.cpuManufacturer.Contains("Intel"))
             {
                 txtCPUManufacturer.Text = "Genuine Intel";
+            }
+            else if (cpu.cpuManufacturer.Contains("AMD"))
+            {
+                txtCPUManufacturer.Text = "Authentic AMD";
             }
             else
             {
@@ -105,6 +119,63 @@ namespace ezCPU
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/ioschris/ezCPU");
+        }
+
+        //Check for update and download if it exists
+        public void DownloadUpdate()
+        {
+            //URL of the updated file
+            string url = "http://www.chrisharrisdev.com/ezcpu/ezCPU.exe";
+
+            //Declare new WebClient object
+            WebClient wc = new WebClient();
+            wc.DownloadFileCompleted += new AsyncCompletedEventHandler(wc_DownloadFileCompleted);
+            wc.DownloadFileAsync(new Uri(url), Application.StartupPath + "/ezCPU(1).exe");
+        }
+
+        //When the download completes, show the message box and restart the application
+        void wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            //Show a message when the download has completed
+            MessageBox.Show("ezCPU is now up-to-date!\n\nThe application will now restart!", "ezCPU - Update Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Restart();
+        }
+
+        //Create method to check for an update
+        public void GetUpdate()
+        {
+            //Declare new WebClient object
+            WebClient wc = new WebClient();
+            string textFile = wc.DownloadString("http://www.chrisharrisdev.com/ezcpu/ezcpu_version.txt");
+            newVersion = textFile;
+
+            //If there is a new version, call the DownloadUpdate method
+            if (newVersion != Application.ProductVersion)
+            {
+                MessageBox.Show("An update is available!\n\nClick OK to download and restart!", "ezCPU - Update Available", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DownloadUpdate();
+            }
+            else
+            {
+                MessageBox.Show("ezCPU is up-to-date!\n\nThere is not an update that needs to be applied!", "ezCPU - Up-to-Date", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        //When the app restarts, rename the updated file, rename the original file, and delete the old version
+        private void ezCPU_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //This renames the original file so any shortcut works and names it accordingly after the update
+            if (System.IO.File.Exists(Application.StartupPath + "/ezCPU(1).exe"))
+            {
+                System.IO.File.Move(Application.StartupPath + "/ezCPU.exe", Application.StartupPath + "/ezCPU(2).exe");
+                System.IO.File.Move(Application.StartupPath + "/ezCPU(1).exe", Application.StartupPath + "/ezCPU.exe");
+            }
+        }
+
+        //Check for updates
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GetUpdate();
         }
     }
 }

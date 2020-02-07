@@ -6,6 +6,9 @@ namespace ezCPU
 {
     public class Motherboard
     {
+        //Check for null object
+        IsNull n = new IsNull();
+
         //Public motherboard variables
         public string mbModel;
         public string mbManufacturer;
@@ -35,35 +38,39 @@ namespace ezCPU
                 foreach (ManagementObject obj in baseBoard.Get())
                 {
                     //Assign motherboard manufacturer
-                    mbManufacturer = obj["Manufacturer"].ToString();
+                    mbManufacturer = n.isNull(obj["Manufacturer"]);
 
                     //Assign motherboard model
-                    mbModel = obj["Product"].ToString();
+                    mbModel = n.isNull(obj["Product"]);
 
                     //Assign motherboard serial number
-                    mbSerial = obj["SerialNumber"].ToString();
+                    mbSerial = n.isNull(obj["SerialNumber"]);
 
                     //Assign motherboard status
-                    mbStatus = obj["Status"].ToString();
+                    mbStatus = n.isNull(obj["Status"]);
                 }
 
                 foreach (ManagementObject obj in motherBoard.Get())
                 {
                     //Assign motherboard bus type
-                    mbBusType = obj["PrimaryBusType"].ToString();
+                    mbBusType = n.isNull(obj["PrimaryBusType"]);
                 }
 
                 foreach (ManagementObject obj in bios.Get())
                 {
                     //Assign bios version
-                    biosVersion = obj["Caption"].ToString();
+                    biosVersion = n.isNull(obj["Caption"]);
 
                     //Assign bios date (Custom Date Time)
-                    string tempBIOSDate = obj["ReleaseDate"].ToString();
-                    biosDate = dt.CustomDateTime(tempBIOSDate.Substring(0, 8));
+                    string tempBIOSDate = n.isNull(obj["ReleaseDate"]);
+
+                    if (tempBIOSDate != "N/A")
+                    {
+                        biosDate = dt.CustomDateTime(tempBIOSDate.Substring(0, 8));
+                    }
 
                     //Assign the BIOS manufacturer
-                    biosManufacturer = obj["Manufacturer"].ToString();
+                    biosManufacturer = n.isNull(obj["Manufacturer"]);
                 }
             }
             catch (Exception e)

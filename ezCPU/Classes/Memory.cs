@@ -6,6 +6,9 @@ namespace ezCPU
 {
     public class Memory
     {
+        //Check for null object
+        IsNull n = new IsNull();
+
         //Public ram variables
         public string ramSize;
         public string ramManufacturer;
@@ -122,15 +125,16 @@ namespace ezCPU
                 foreach (ManagementObject obj in ram.Get())
                 {
                     //Assign ram manufacturer
-                    ramManufacturer = obj["Manufacturer"].ToString();
+                    ramManufacturer = n.isNull(obj["Manufacturer"]);
 
                     //Assign ram type
-                    ramType = obj["SMBIOSMemoryType"].ToString();
+                    ramType = n.isNull(obj["SMBIOSMemoryType"]);
 
                     //Get ram frequency
-                    ramFrequency = obj["Speed"].ToString();
+                    ramFrequency = n.isNull(obj["Speed"]);
 
-                    ramSize = WMIGetTotalPhysicalMemory().ToString();
+                    //Assign return of WMIGetTotalPhysicalMemory() to the ramSize variable
+                    ramSize = n.isNull(WMIGetTotalPhysicalMemory());
                 }
             }
             catch (Exception e)
