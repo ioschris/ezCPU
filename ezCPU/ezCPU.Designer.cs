@@ -107,6 +107,11 @@
             this.abVersion = new System.Windows.Forms.Label();
             this.pbAbout = new System.Windows.Forms.PictureBox();
             this.cpuTimer = new System.Windows.Forms.Timer(this.components);
+            this.label32 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.tabPage4.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -821,6 +826,11 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.linkLabel5);
+            this.groupBox6.Controls.Add(this.linkLabel4);
+            this.groupBox6.Controls.Add(this.linkLabel3);
+            this.groupBox6.Controls.Add(this.linkLabel2);
+            this.groupBox6.Controls.Add(this.label32);
             this.groupBox6.Controls.Add(this.label30);
             this.groupBox6.Controls.Add(this.linkLabel1);
             this.groupBox6.Controls.Add(this.label29);
@@ -836,7 +846,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(57, 98);
+            this.label30.Location = new System.Drawing.Point(57, 84);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(254, 13);
             this.label30.TabIndex = 4;
@@ -845,7 +855,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(188, 76);
+            this.linkLabel1.Location = new System.Drawing.Point(188, 62);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(40, 13);
             this.linkLabel1.TabIndex = 3;
@@ -856,7 +866,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(138, 76);
+            this.label29.Location = new System.Drawing.Point(138, 62);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(44, 13);
             this.label29.TabIndex = 2;
@@ -865,7 +875,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(136, 54);
+            this.label28.Location = new System.Drawing.Point(136, 40);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(97, 13);
             this.label28.TabIndex = 1;
@@ -874,7 +884,7 @@
             // abVersion
             // 
             this.abVersion.AutoSize = true;
-            this.abVersion.Location = new System.Drawing.Point(143, 32);
+            this.abVersion.Location = new System.Drawing.Point(143, 18);
             this.abVersion.Name = "abVersion";
             this.abVersion.Size = new System.Drawing.Size(45, 13);
             this.abVersion.TabIndex = 0;
@@ -894,6 +904,59 @@
             // 
             this.cpuTimer.Enabled = true;
             this.cpuTimer.Interval = 1000;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(47, 110);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(92, 13);
+            this.label32.TabIndex = 5;
+            this.label32.Text = "Special thanks to:";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(139, 110);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(42, 13);
+            this.linkLabel2.TabIndex = 6;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "@dean";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(187, 110);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(35, 13);
+            this.linkLabel3.TabIndex = 7;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "@cas";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(228, 110);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(49, 13);
+            this.linkLabel4.TabIndex = 8;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "@shizzle";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Location = new System.Drawing.Point(283, 110);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(39, 13);
+            this.linkLabel5.TabIndex = 9;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "@kelly";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // ezCPU
             // 
@@ -1012,6 +1075,11 @@
         private System.Windows.Forms.Label label30;
         public System.Windows.Forms.TextBox txtGPUDriverDate;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label32;
     }
 }
 

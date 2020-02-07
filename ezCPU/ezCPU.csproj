@@ -90,6 +90,7 @@
     <Compile Include="Classes\IsNull.cs" />
     <Compile Include="Classes\Memory.cs" />
     <Compile Include="Classes\Motherboard.cs" />
+    <Compile Include="Classes\Updater.cs" />
     <Compile Include="ezCPU.cs">
       <SubType>Form</SubType>
     </Compile>
