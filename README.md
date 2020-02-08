@@ -1,6 +1,6 @@
 # ezCPU
 
-With ezCPU, you can view simple PC stats that may be needed to troubleshoot issues, upgrading components, or monitoring your system!
+With ezCPU, you can view simple PC stats that may be needed to troubleshoot issues, upgrading components, or monitoring your system! ezCPU was developed using System.Management and the source code will show how to pull these statistics from the system. The documentation can be found [here](https://docs.microsoft.com/en-us/windows/win32/cimwin32prov/win32-provider "Win32 Documentation").
 
 # Screenshots
 ![ScreenShot](https://i.gyazo.com/c5f9fea5de9b089b3c96535512f8aa24.png)
