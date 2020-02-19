@@ -22,7 +22,7 @@ namespace ezCPU
 
         //On load, do this
         private void ezCPU_Load(object sender, EventArgs e)
-        {
+        { 
             if (System.IO.File.Exists(Application.StartupPath + "/ezCPU(2).exe"))
             {
                 System.IO.File.Delete(Application.StartupPath + "/ezCPU(2).exe");
