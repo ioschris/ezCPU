@@ -11,10 +11,11 @@ C:\Users\crhar\source\repos\ezCPU\ezCPU\obj\Debug\ezCPU.ezCPU.resources
 C:\Users\crhar\OneDrive\Documents\GitHub\ezCPU\ezCPU\bin\Debug\ezCPU.exe.config
 C:\Users\crhar\OneDrive\Documents\GitHub\ezCPU\ezCPU\bin\Debug\ezCPU.exe
 C:\Users\crhar\OneDrive\Documents\GitHub\ezCPU\ezCPU\bin\Debug\ezCPU.pdb
-C:\Users\crhar\OneDrive\Documents\GitHub\ezCPU\ezCPU\obj\Debug\ezCPU.csprojAssemblyReference.cache
 C:\Users\crhar\OneDrive\Documents\GitHub\ezCPU\ezCPU\obj\Debug\ezCPU.ezCPU.resources
 C:\Users\crhar\OneDrive\Documents\GitHub\ezCPU\ezCPU\obj\Debug\ezCPU.Properties.Resources.resources
 C:\Users\crhar\OneDrive\Documents\GitHub\ezCPU\ezCPU\obj\Debug\ezCPU.csproj.GenerateResource.cache
 C:\Users\crhar\OneDrive\Documents\GitHub\ezCPU\ezCPU\obj\Debug\ezCPU.csproj.CoreCompileInputs.cache
 C:\Users\crhar\OneDrive\Documents\GitHub\ezCPU\ezCPU\obj\Debug\ezCPU.exe
 C:\Users\crhar\OneDrive\Documents\GitHub\ezCPU\ezCPU\obj\Debug\ezCPU.pdb
+C:\Users\crhar\OneDrive\Documents\Github\ezCPU\ezCPU\obj\Debug\ezCPU.csproj.AssemblyReference.cache
+C:\Users\crhar\OneDrive\Documents\Github\ezCPU\ezCPU\obj\Debug\ezCPU.csproj.SuggestedBindingRedirects.cache
